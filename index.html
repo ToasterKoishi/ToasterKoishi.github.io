@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+
+     TOAST POPS OUT
+
+-->
+
+<head>
+<meta charset="UTF-8">
+<title>Toaster Dreams</title>
+<style>
+html, body, .content {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Tahoma;
+    font-size: 16px;
+    color: #d8fbff;
+}
+body {
+    background-image: url("bg.png");
+    background-position: center;
+    background-size: cover;
+}
+.content {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    background: rgba(0,0,0,0.5);
+}
+
+.header {
+    flex: 1;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.header-title {
+    padding: 8px;
+    font-size: 60px;
+    text-shadow: 0 0 10px #000000;
+}
+.header-subtitle {
+}
+.items {
+    flex: 1;
+    margin: 0 16px;
+    display: flex;
+    justify-content: center;
+}
+
+.item {
+    flex: 1;
+    max-width: 196px;
+    padding: 16px;
+}
+.item a { color: inherit; }
+.box-before {
+    position: relative;
+    width: 100%;
+    display: inline-block;
+}
+.box-before:before {
+    content: "";
+    margin-top: 100%;
+    display: block;
+}
+.box-content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: rgba(0,0,0,0.75);
+}
+.box-content-hover {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,1);
+    opacity: 0;
+    transition: background 0.3s ease, opacity 0.3s ease;
+}
+.box-content-hover:hover {
+    opacity: 1;
+}
+.box-content-title {
+    padding: 4px;
+    font-size: 24px;
+}
+.box-content-detail {
+    padding: 4px;
+    font-size: 16px;
+}
+
+.box-content-twitter-title { color: #4099ff; }
+.box-content-twitter { color: white; background: #4099ff; }
+.box-content-iidxme-title { color: #ffcc00; }
+.box-content-iidxme { color: white; background: #ffcc00; }
+.box-content-insane-title { color: red; }
+.box-content-insane { color: red; background: #111111; }
+.box-content-sisters-title { color: #00ccff; }
+.box-content-sisters { color: white; background: #00ccff; }
+</style>
+</head>
+
+<body>
+<div class="content">
+    <div class="header">
+        <div class="header-title">Toaster Dreams</div>
+        <div class="header-subtitle"></div>
+    </div>
+
+    <div class="items">
+        <div class="item">
+            <a class="box-before" href="https://twitter.com/ToasterKoishi">
+                <div class="box-content box-content-title box-content-twitter-title">Twitter</div>
+                <div class="box-content box-content-hover box-content-twitter">
+                    <div class="box-content-title">@ToasterKoishi</div>
+                    <div class="box-content-detail">Koishi's daily life</div>
+                </div>
+            </a>
+        </div>
+        <div class="item">
+            <a class="box-before" href="http://iidx.me/Bitzeralisis/">
+                <div class="box-content box-content-title box-content-iidxme-title">beatmaniaIIDX</div>
+                <div class="box-content box-content-hover box-content-iidxme">
+                    <div class="box-content-title">iidx.me</div>
+                    <div class="box-content-detail">Official eAmuse scores</div>
+                </div>
+            </a>
+        </div>
+        <div class="item">
+            <a class="box-before" href="http://stairway.sakura.ne.jp/bms/LunaticRave2/?contents=player&page=95854">
+                <div class="box-content box-content-title box-content-insane-title">発狂BMS</div>
+                <div class="box-content box-content-hover box-content-insane">
+                    <div class="box-content-title">stairway</div>
+                    <div class="box-content-detail">Insane BMS score tables</div>
+                </div>
+            </a>
+        </div>
+        <div class="item">
+            <a class="box-before" href="http://sisters.kouhi.me/index.php?title=User:Toaster">
+                <div class="box-content box-content-title box-content-sisters-title">Tokyo 7th<br/>シスターズ</div>
+                <div class="box-content box-content-hover box-content-sisters">
+                    <div class="box-content-title">t7s English Wiki</div>
+                    <div class="box-content-detail">Koishi's strategy page<br/>Momoka is good</div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+</div>
+</body>
+
+</html>
