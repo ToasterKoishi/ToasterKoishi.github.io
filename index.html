@@ -46,8 +46,13 @@ body {
 .header-subtitle {
 }
 .items {
-    flex: 1;
+    flex: 2;
     margin: 0 16px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+.items-row {
     display: flex;
     justify-content: center;
 }
@@ -62,6 +67,7 @@ body {
     position: relative;
     width: 100%;
     display: inline-block;
+    background: rgba(0,0,0,0.75);
 }
 .box-before:before {
     content: "";
@@ -78,7 +84,6 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: rgba(0,0,0,0.75);
 }
 .box-content-hover {
     display: flex;
@@ -109,6 +114,14 @@ body {
 .box-content-insane { color: red; background: #111111; }
 .box-content-sisters-title { color: #00ccff; }
 .box-content-sisters { color: white; background: #00ccff; }
+.box-content-secret1-title {
+    background: linear-gradient(90deg, #22cc99 40%, #bb22bb 50%, #ee2222 60%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.box-content-secret1 { color: #440044; background: linear-gradient(#ffffff, #bbbbbb); }
+.box-content-secret2-title { font-family: monospace; color: #00ff00; }
+.box-content-secret2 { font-family: monospace; color: #00ff00; background: black; }
 </style>
 </head>
 
@@ -120,42 +133,74 @@ body {
     </div>
 
     <div class="items">
-        <div class="item">
-            <a class="box-before" href="https://twitter.com/ToasterKoishi">
-                <div class="box-content box-content-title box-content-twitter-title">Twitter</div>
-                <div class="box-content box-content-hover box-content-twitter">
-                    <div class="box-content-title">@ToasterKoishi</div>
-                    <div class="box-content-detail">Koishi's daily life</div>
+
+        <div class="items-row">
+
+            <div class="item">
+                <a class="box-before" href="https://twitter.com/ToasterKoishi">
+                    <div class="box-content box-content-title box-content-twitter-title">Twitter</div>
+                    <div class="box-content box-content-hover box-content-twitter">
+                        <div class="box-content-title">@ToasterKoishi</div>
+                        <div class="box-content-detail">Koishi's daily life</div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="item">
+                <div class="box-before">
+                    <div class="box-content box-content-title box-content-secret1-title">???</div>
+                    <div class="box-content box-content-hover box-content-secret1">
+                        <div class="box-content-title">Secret Project</div>
+                        <div class="box-content-detail">Coming soon to iOS and Android</div>
+                    </div>
                 </div>
-            </a>
-        </div>
-        <div class="item">
-            <a class="box-before" href="http://iidx.me/Bitzeralisis/">
-                <div class="box-content box-content-title box-content-iidxme-title">beatmaniaIIDX</div>
-                <div class="box-content box-content-hover box-content-iidxme">
-                    <div class="box-content-title">iidx.me</div>
-                    <div class="box-content-detail">Official eAmuse scores</div>
+            </div>
+
+            <div class="item">
+                <div class="box-before">
+                    <div class="box-content box-content-title box-content-secret2-title">???</div>
+                    <div class="box-content box-content-hover box-content-secret2">
+                        <div class="box-content-title">Secret Project</div>
+                        <div class="box-content-detail">Not coming soon to a terminal near you</div>
+                    </div>
                 </div>
-            </a>
+            </div>
+
         </div>
-        <div class="item">
-            <a class="box-before" href="http://stairway.sakura.ne.jp/bms/LunaticRave2/?contents=player&page=95854">
-                <div class="box-content box-content-title box-content-insane-title">発狂BMS</div>
-                <div class="box-content box-content-hover box-content-insane">
-                    <div class="box-content-title">stairway</div>
-                    <div class="box-content-detail">Insane BMS score tables</div>
-                </div>
-            </a>
+
+        <div class="items-row">
+
+            <div class="item">
+                <a class="box-before" href="http://iidx.me/Bitzeralisis/">
+                    <div class="box-content box-content-title box-content-iidxme-title">beatmaniaIIDX</div>
+                    <div class="box-content box-content-hover box-content-iidxme">
+                        <div class="box-content-title">iidx.me</div>
+                        <div class="box-content-detail">Official eAmuse scores</div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="item">
+                <a class="box-before" href="http://stairway.sakura.ne.jp/bms/LunaticRave2/?contents=player&page=95854">
+                    <div class="box-content box-content-title box-content-insane-title">発狂BMS</div>
+                    <div class="box-content box-content-hover box-content-insane">
+                        <div class="box-content-title">stairway</div>
+                        <div class="box-content-detail">Insane BMS score tables</div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="item">
+                <a class="box-before" href="http://sisters.kouhi.me/index.php?title=User:Toaster">
+                    <div class="box-content box-content-title box-content-sisters-title">Tokyo 7th<br/>シスターズ</div>
+                    <div class="box-content box-content-hover box-content-sisters">
+                        <div class="box-content-title">t7s English Wiki</div>
+                        <div class="box-content-detail">Koishi's strategy page<br/>Momoka is good</div>
+                    </div>
+                </a>
+            </div>
         </div>
-        <div class="item">
-            <a class="box-before" href="http://sisters.kouhi.me/index.php?title=User:Toaster">
-                <div class="box-content box-content-title box-content-sisters-title">Tokyo 7th<br/>シスターズ</div>
-                <div class="box-content box-content-hover box-content-sisters">
-                    <div class="box-content-title">t7s English Wiki</div>
-                    <div class="box-content-detail">Koishi's strategy page<br/>Momoka is good</div>
-                </div>
-            </a>
-        </div>
+
     </div>
 
 </div>
