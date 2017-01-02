@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Not drop</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="notedrop/notedrop.css" type="text/css">
+    <script src="notedrop/notedrop.js" type="text/javascript"></script>
+    <script src="notedrop/sylvester.js" type="text/javascript"></script>
+    <script src="notedrop/glUtils.js" type="text/javascript"></script>
+
+    <!-- Fragment shader program -->
+
+    <script id="shader-fs" type="x-shader/x-fragment">
+      varying lowp vec4 vColor;
+      varying highp vec2 vTexCoord;
+
+      uniform lowp vec4 vColorTransform;
+      uniform sampler2D uSampler;
+
+      void main(void) {
+        gl_FragColor = vColorTransform*vColor*texture2D(uSampler, vTexCoord);
+      }
+    </script>
+
+    <!-- Vertex shader program -->
+
+    <script id="shader-vs" type="x-shader/x-vertex">
+      attribute vec3 aVertexPosition;
+      attribute vec4 aVertexColor;
+      attribute vec2 aTexCoord;
+
+      uniform mat4 uMVMatrix;
+      uniform mat4 uPMatrix;
+
+      varying lowp vec4 vColor;
+      varying highp vec2 vTexCoord;
+
+      void main(void) {
+        gl_Position = uPMatrix * uMVMatrix * vec4(aVertexPosition, 1.0);
+        vColor = aVertexColor;
+        vTexCoord = aTexCoord;
+      }
+    </script>
+  </head>
+
+  <body onload="start()">
+    <canvas id="glcanvas"></canvas>
+    <div id="dom" style="visibility: hidden;">
+      <div id="comboText">Combo</div>
+      <div id="combo"></div>
+      <div id="judge"></div>
+      <div id="scoreText">Score</div>
+      <div id="score"></div>
+    </div>
+  </body>
+</html>

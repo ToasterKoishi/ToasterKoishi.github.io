@@ -1,0 +1,44 @@
+html, body, canvas {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+div {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  color: white;
+  font-family: monospace;
+  text-align: center;
+  user-select: none;
+}
+canvas {
+  display: block;
+  background-color: black;
+}
+video {
+	display: none;
+}
+
+#comboText {
+  top: 7%;
+  font-size: 3vh;
+}
+#combo {
+  top: 10%;
+  font-size: 5vh;
+}
+
+#judge {
+  top: 75%;
+  font-size: 7vh;
+}
+
+#scoreText {
+  top: 89%;
+  font-size: 3vh;
+}
+#score {
+  top: 92%;
+  font-size: 5vh;
+}
