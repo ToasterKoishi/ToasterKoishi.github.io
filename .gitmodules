@@ -1,0 +1,3 @@
+[submodule "prism-idle"]
+	path = prism-idle
+	url = https://github.com/ToasterKoishi/prism-idle.git
