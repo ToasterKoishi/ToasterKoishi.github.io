@@ -60,12 +60,12 @@
 
         @keyframes rotate {
             0% {
-                rotate: 0deg;
+                transform: rotate(0deg);
                 animation-timing-function: linear;
             }
 
             100% {
-                rotate: 360deg;
+                transform: rotate(360deg);
                 animation-timing-function: linear;
             }
         }
@@ -262,6 +262,13 @@
             font-size: 8pt;
         }
     </style>
+    <script type="text/javascript">
+        // Preload images
+        ["./name1.png", "./name2.png", "./name3.png", "./name4.png", "./name5.png", "./name6.png", "./name7.png", "./doily.png"].forEach((file) => {
+            img = new Image();
+            img.src = file;
+        });
+    </script>
 </head>
 
 <body>
